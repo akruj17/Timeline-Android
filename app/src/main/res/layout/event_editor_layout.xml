@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:id="@+id/eventEditor"
+    android:elevation="5dp"
+    android:paddingStart="40dp"
+    android:paddingTop="5dp"
+    android:paddingEnd="60dp"
+    android:layout_gravity="center_horizontal"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter event year"
+            android:id="@+id/textView"
+            android:layout_alignParentStart="true"
+            android:paddingBottom="5dp"
+            android:textColor="#000000"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:inputType="date"
+                android:ems="10"
+                android:id="@+id/eventDate"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textView"
+                android:background="@drawable/border"
+                android:maxLength="4"
+                android:layout_marginRight="20dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BCE"
+                android:id="@+id/checkBoxBCE"
+                android:layout_toEndOf="@id/eventDate"
+                android:layout_alignBaseline="@id/eventDate"/>
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/warningMessageYear"
+            android:textColor="#ff0000"
+            android:layout_below="@+id/newTimelineName"
+            android:layout_gravity="left"
+            android:visibility="invisible" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter event overview (no more than 60 characters)"
+            android:id="@+id/overviewTextView"
+            android:fontFamily="Century Gothic"
+            android:textColor="#000000"
+            android:layout_above="@+id/overviewText"
+            android:layout_alignStart="@+id/eventDate"
+            android:layout_marginTop="5dp" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="0dp"
+            android:layout_gravity="center_horizontal|top"
+            android:background="@drawable/border"
+            android:fontFamily="century gothic"
+            android:maxLength="60"
+            android:textColor="#000000"
+            android:id="@+id/overviewText"
+            android:singleLine="false"
+            android:maxLines="2"
+            android:lines="2"
+            android:layout_above="@+id/detailedTextView"
+            android:layout_alignStart="@+id/overviewTextView"
+            android:layout_marginTop="5dp"
+            android:layout_alignEnd="@+id/eventDescription"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/warningMessageOverview"
+            android:textColor="#ff0000"
+            android:layout_below="@+id/newTimelineName"
+            android:layout_gravity="left"
+            android:visibility="invisible" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter event description (optional)"
+            android:id="@+id/detailedTextView"
+            android:fontFamily="Century Gothic"
+            android:textColor="#000000"
+            android:layout_above="@+id/eventDescription"
+            android:layout_alignStart="@+id/eventDescription"
+            android:layout_marginTop="5dp" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_weight="4"
+            android:layout_height="0dp"
+            android:id="@+id/eventDescription"
+            android:background="@drawable/border"
+            android:fontFamily="century gothic"
+            android:minLines="3"
+
+            android:layout_marginTop="5dp"
+            android:gravity="top|left|start"
+            android:paddingTop="8dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="Add Event"
+            android:id="@+id/addEventButton"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/eventDescription"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal" />
+    </LinearLayout>
+</RelativeLayout>

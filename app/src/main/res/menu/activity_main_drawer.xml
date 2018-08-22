@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:checkableBehavior="single"
+        android:id="@+id/menu_top">
+        <item
+            android:id="@+id/add_timeline_tab"
+            android:title="New Timeline"
+            android:icon="@drawable/ic_add_black_36dp"/>
+       <!-- <item
+            android:id="@+id/manage_existing_timelines"
+            android:title="Manage Existing Timelines"
+            android:icon="@drawable/ic_event_note_black_36dp"/> !-->
+    </group>
+
+    <group
+        android:checkableBehavior="single"
+        android:id="@+id/timeline_list" />
+
+</menu>
